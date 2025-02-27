@@ -1,0 +1,2 @@
+don't forget to use 
+chmod +x <script.sh>
