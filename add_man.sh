@@ -1,5 +1,5 @@
 # Move man page
-if [[ ! -f "fcd.1" ]]; then
+if [[ ! -f "man/fcd.1" ]]; then
     echo "Error: fcd.1 not found in the current directory!"
     exit 1
 fi
