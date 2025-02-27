@@ -1,6 +1,25 @@
 #!/bin/bash
 
 fcd() {
+    # Display help message if --help is passed
+    if [[ "$1" == "--help" ]]; then
+        echo "Usage: fcd [OPTIONS] SEARCH_TERM"
+        echo
+        echo "Fuzzy Change Directory - Quickly navigate directories using fzf and fdfind."
+        echo
+        echo "Options:"
+        echo "  -d N       Limit search depth to N levels."
+        echo "  --help     Show this help message and exit."
+        echo
+        echo "Examples:"
+        echo "  fcd projects       # Search for 'projects' directory"
+        echo "  fcd -d 2 projects  # Search for 'projects' but limit depth to 2"
+        echo "For more usage:"
+        echo "  fdfind --help"
+        return 0
+    fi
+
+    # Capture all optional arguments before the search term
     local search_term
     local args=()
 
@@ -11,9 +30,7 @@ fcd() {
         esac
     done
 
+    # Run fdfind with optional arguments + search term
     cd "$(fdfind -t d "${args[@]}" "$search_term" ~/ | fzf)"
 }
-
-# Make sure this function is available when sourced
-export -f fcd
 
