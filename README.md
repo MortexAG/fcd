@@ -5,6 +5,8 @@
 
 You can just run the installation script
 ```sh
+git clone https://github.com/MortexAG/fcd.git 
+cd fcd/
 bash install_fcd.sh
 ```
 
