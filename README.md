@@ -1,8 +1,14 @@
 # fcd - Fuzzy Change Directory
 
 `fcd` is a simple function that lets you quickly navigate directories using `fzf` and `fdfind`.
-
 ## Installation
+
+You can just run the installation script
+```sh
+bash install_fcd.sh
+```
+
+## Manual Installation
 
  First you Will need `fdfind` and `fzf` installed
 
@@ -28,6 +34,14 @@ echo "source $(pwd)/fcd.sh" >> ~/.zshrc   # For Zsh
 ```sh
 source ~/.bashrc  # or source ~/.zshrc
 ```
+
+# 3.1 Optional
+
+Add the man page
+```sh
+bash add_man.sh
+```
+
 # 4. Usage
 
 Search for a directory:
@@ -40,6 +54,17 @@ Pass arguments before the search term:
 
 ```sh
 fcd -d 2 projects
+```
+For how to use the command
+
+it mainly takes the arguments of the `fdfind`
+```sh
+fcd --help
+```
+and for `fdfind`
+
+```sh
+fdfind --help
 ```
 ## Uninstall
 
