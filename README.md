@@ -10,6 +10,14 @@ cd fcd/
 bash install_fcd.sh
 ```
 
+# For Archlinux the installation script
+```sh
+git clone https://github.com/MortexAG/fcd.git 
+cd fcd/
+bash arch_install.sh
+```
+
+
 ## Manual Installation
 
  First you Will need `fdfind` and `fzf` installed
