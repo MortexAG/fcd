@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Install dependencies
-echo "Installing fdfind and fzf..."
+echo "Installing fd and fzf..."
 sudo pacman -Sy fd && sudo pacman -Sy fzf
 
 # Ensure fcd.sh exists
-if [[ ! -f "fcd.sh" ]]; then
+if [[ ! -f "arch-fcd.sh" ]]; then
     echo "Error: fcd.sh not found in the current directory!"
     exit 1
 fi
