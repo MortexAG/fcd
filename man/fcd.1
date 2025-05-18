@@ -1,4 +1,4 @@
-.TH FCD 1.1 "May 2025" "1.1" "User Commands"
+.TH FCD 1 "February 2025" "1.0" "User Commands"
 .SH NAME
 fcd \- fuzzy change directory with optional arguments
 .SH SYNOPSIS
@@ -11,36 +11,24 @@ allows users to interactively change directories using fuzzy searching.
 By default, it searches for directories matching the search term inside the home directory (`~/`).
 If no search term is provided, it lists all directories.
 
-If the \fB-r\fR flag is provided, the search will start from the root directory (`/`), instead of the home directory.
-
 .SH OPTIONS
 .TP
 \fB-d\fR \fIN\fR
 Specify the search depth (N levels deep).
 .TP
-\fB-r\fR
-Start the search from the root directory (`/`), instead of the default home directory (`~/`).
-.TP
 \fB--hidden\fR
 Include hidden directories in the search results.
-.TP
-\fB--help\fR
-Show the help message and exit.
 .SH EXAMPLES
 .TP
-Find and navigate to a directory named "projects" starting from the home directory:
+Find and navigate to a directory named "projects":
 .B fcd projects
 .TP
-Find and navigate to a directory named "projects" but limit search to 2 levels deep, starting from the home directory:
+Find and navigate to a directory named "projects" but limit search to 2 levels deep:
 .B fcd -d 2 projects
 .TP
-Find and navigate to a directory named "config", including hidden directories, starting from the home directory:
+Find and navigate to a directory named "config", including hidden directories:
 .B fcd --hidden config
-.TP
-Find and navigate to a directory named "projects", starting from the root directory:
-.B fcd -r projects
 .SH SEE ALSO
 .B fdfind(1), fzf(1), cd(1)
 .SH AUTHOR
 Written by MortexAG with help of ChatGPT.
-
